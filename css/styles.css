@@ -568,7 +568,7 @@ address {
     width: 206px;
 }
 
-.social-block-title {
+.block-title {
     margin-bottom: 20px;
     text-transform: uppercase;
     font-weight: bold;
@@ -598,6 +598,64 @@ address {
 .footer-social-list:hover,
 .footer-social-list:focus {
     background-color: var(--second-color-link)
+}
+
+/*footer mail-block*/
+/*=============================*/
+.mail-block {
+    margin-left: 93px;
+
+}
+
+.form-footer {
+    display: flex;
+}
+
+.input-mail {
+    width: 358px;
+    height: 50px;
+    margin-right: 12px;
+    padding: 15px;
+    font-size: 16px;
+    background-color: var(--background-hero);
+    color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+}
+
+.input-mail:focus {
+    color: var(--background-color);
+}
+
+.btm-submit {
+    position: relative;
+    width: 200px;
+    height: 50px;
+    border: none;
+    padding: 0px;
+    padding-right: 28px;
+
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.87;
+    color: var(--background-color);
+    background: var(--second-color-link);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.icon-send {
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 28px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    fill: var(--background-color)
 }
 
 
@@ -803,6 +861,20 @@ address {
     height: 11px;
     fill: #000000;
 
+}
+
+.title-modal {
+    position: absolute;
+    top: 200;
+    left: 200;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-item);
+    Font family: Roboto;
+    Font style: Bold;
+    Font size: 20px;
+    Line height: 1;
 }
 
 /*=============END MODAL WINDOW===========*/
