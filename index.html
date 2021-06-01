@@ -286,7 +286,7 @@
                 <form class="form-footer">
                     <label for="form-send">
                         <input class="input-mail" type="email" name="input-mail" id="form-send" placeholder="E-mail"
-                            autofocus autocomplete="off" /></label>
+                            autocomplete="off" /></label>
                     <button type="submit" class="btm-submit"><svg class="icon-send">
                             <use href="./images/symbol-defs.svg#icon-send"></use>
                         </svg>Подписаться</button>
@@ -300,12 +300,39 @@
             <button data-modal-close class="closed" type="button"><svg class="botton-closed">
                     <use href="./images/symbol-defs.svg#icon-vector"></use>
                 </svg></button>
-            <p class="title-modal">Оставьте свои данные, мы вам перезвоним</p>
+
+            <form class="form">
+                <p class="title-modal">Оставьте свои данные, мы вам перезвоним</p>
+                <label class="forms-contact">
+                    <span class="legend-contact">Имя</span>
+                    <input class="input-contact" type="text" name="user-name" placeholder="" required />
+                </label>
+                <label class="forms-contact">
+                    <span class="legend-contact">Телефон</span>
+                    <input class="input-contact" type="tel" name="user-tel" placeholder=""
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" title="096-111-11-11" />
+                </label>
+                <label class="forms-contact">
+                    <span class="legend-contact">Почта</span>
+                    <input class="input-contact" type="email" name="user-mail" placeholder="" required />
+                </label>
+                <label class="forms-contact">
+                    <span class="legend-contact">Коментарий</span>
+                    <textarea class="form-message" name="user-message" placeholder="Введите текст"></textarea>
+                </label>
+                <div>
+                    <label class="checkbox-rules">
+                        <input type="checkbox" name="" value="weekly" />Соглашаюсь с рассылкой и принимаю<a
+                            class="rules" href="https.google.com.ua" target="_blank" rel="noopener noreferrer">Условия
+                            договора</a>
+                    </label>
+                </div>
+                <button class="sent-btn" type="submit">Отправить</button>
+            </form>
         </div>
-    </div>
-    <!--========END MODAL WINDOW=========-->
-    <!--JS-->
-    <script src="./JS/modal.js"></script>
+        <!--========END MODAL WINDOW=========-->
+        <!--JS-->
+        <script src="./JS/modal.js"></script>
 </body>
 
 </html>
