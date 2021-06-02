@@ -622,6 +622,7 @@ address {
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-mail:focus {
@@ -645,6 +646,12 @@ address {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     cursor: pointer;
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btm-submit:focus,
+.btm-submit:hover {
+    background: var(--btn-hover);
 }
 
 .icon-send {
@@ -865,7 +872,7 @@ address {
 
 }
 
-.botton-closed:hover {
+.closed:hover .botton-closed {
     fill: var(--second-color-link);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -880,7 +887,7 @@ address {
 
 }
 
-.title-modal {
+.form-title {
     text-align: center;
     color: var(--text-item);
     font-family: Roboto;
@@ -890,13 +897,14 @@ address {
     margin-bottom: 10px;
 }
 
-.forms-contact {
+.form-contact {
+    position: relative;
     display: block;
     margin-bottom: 10px;
 
 }
 
-.legend-contact {
+.form-legend {
     display: block;
     font-size: 12px;
     margin-bottom: 4px;
@@ -907,8 +915,12 @@ address {
     display: block;
     width: 100%;
     height: 40px;
+    padding-left: 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    font-size: 14px;
+    box-shadow: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -917,19 +929,93 @@ address {
     width: 100%;
     height: 120px;
     padding: 12px 16px;
+    margin-bottom: 20px;
     resize: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 
 }
 
 .form-message::placeholder {
-    font-size: 12px;
+    font-size: 14px;
     color: rgba(117, 117, 117, 0.5);
 }
 
-.checkbox-rules {}
+.form-message:focus {
+    color: var(--primary-text-color);
+    border-color: var(--second-color-link);
+    outline: none;
+}
 
+.check {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    text-align: center;
+    font-family: Roboto;
+    Line-height: 1.46;
+}
+
+.check__input {
+    position: absolute;
+    display:inline-block;
+    visibility: hidden;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px
+}
+
+.check__svg {
+    position: absolute;
+    align-items: center;
+    padding: 0;
+    left: 54px;
+    width: 16px;
+    height: 15px;
+    border: 2px solid #212121;
+    border-radius: 2px;
+}
+
+.check__input:checked + .check__svg {
+    background-color: var(--second-color-link);
+    border-color: var(--second-color-link);
+    background-image: url(../images/icon-check.svg);
+    background-size: contain;
+    background-origin: border-box;
+
+}
+input:focus ~ .check__svg {
+    background-color: var(--second-color-link);
+}
+
+.icon-form {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    fill: var(--text-item);
+
+}
+
+.box__rules {
+    color: var(--second-color-link);
+}
+
+.input-contact:focus+.icon-form {
+    fill: var(--second-color-link);
+}
+
+.input-contact:focus {
+    color: var(--primary-text-color);
+    border-color: var(--second-color-link);
+    outline: none;
+}
 
 .sent-btn {
     display: block;
@@ -945,7 +1031,6 @@ address {
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
-
     letter-spacing: 0.06em;
 
     color: var(--background-color);
@@ -954,6 +1039,12 @@ address {
     border-radius: 4px;
     cursor: pointer;
     transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.sent-btn:hover,
+.sent-btn:focus {
+    background: var(--btn-hover);
 
 }
 
