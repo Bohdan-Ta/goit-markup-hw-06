@@ -950,46 +950,45 @@ address {
 }
 
 .check {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     margin-bottom: 30px;
-    padding-left: 20px;
-    text-align: center;
     font-family: Roboto;
     Line-height: 1.46;
+
 }
 
 .check__input {
     position: absolute;
-    display:inline-block;
-    visibility: hidden;
+    display: block;
+    appearance: none;
+
+    /* visibility: hidden;
     clip: rect(0 0 0 0);
     width: 1px;
     height: 1px;
-    margin: -1px
+    margin: -1px */
 }
 
 .check__svg {
-    position: absolute;
-    align-items: center;
+    display: inline-block;
+    margin-right: 7px;
     padding: 0;
-    left: 54px;
     width: 16px;
     height: 15px;
     border: 2px solid #212121;
     border-radius: 2px;
 }
 
-.check__input:checked + .check__svg {
+.check__input:checked+.check__svg {
     background-color: var(--second-color-link);
     border-color: var(--second-color-link);
     background-image: url(../images/icon-check.svg);
     background-size: contain;
     background-origin: border-box;
 
-}
-input:focus ~ .check__svg {
-    background-color: var(--second-color-link);
 }
 
 .icon-form {
