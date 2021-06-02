@@ -963,13 +963,12 @@ address {
 .check__input {
     position: absolute;
     display: block;
-    appearance: none;
-
-    /* visibility: hidden;
+    /* appearance: none; НО НЕ РАБОТАЕТ ФОКУС*/ 
+    visibility: hidden;
     clip: rect(0 0 0 0);
     width: 1px;
     height: 1px;
-    margin: -1px */
+    margin: -1px;
 }
 
 .check__svg {
