@@ -604,6 +604,10 @@ address {
 /*=============================*/
 .mail-block {
     margin-left: 93px;
+}
+
+.form-sent {
+    margin-right: 12px;
 
 }
 
@@ -614,7 +618,6 @@ address {
 .input-mail {
     width: 358px;
     height: 50px;
-    margin-right: 12px;
     padding: 15px;
     font-size: 16px;
     background-color: var(--background-hero);
@@ -839,7 +842,7 @@ address {
     min-height: 581px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0;
+    padding: 40px;
     border-radius: 4px;
     background-color: var(--background-color);
 
@@ -878,14 +881,6 @@ address {
 }
 
 /*=====FORMS======*/
-.form {
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 100%;
-    padding: 0 40px;
-
-}
 
 .form-title {
     text-align: center;
@@ -957,18 +952,20 @@ address {
     margin-bottom: 30px;
     font-family: Roboto;
     Line-height: 1.46;
-
 }
 
 .check__input {
     position: absolute;
-    display: block;
-    /* appearance: none; НО НЕ РАБОТАЕТ ФОКУС*/ 
-    visibility: hidden;
+    left: 54px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    /* visibility: hidden;
     clip: rect(0 0 0 0);
     width: 1px;
     height: 1px;
-    margin: -1px;
+    margin: -1px; */
 }
 
 .check__svg {
@@ -987,6 +984,10 @@ address {
     background-image: url(../images/icon-check.svg);
     background-size: contain;
     background-origin: border-box;
+
+}
+.check__input:focus+.check__svg {
+    border-color: var(--second-color-link);
 
 }
 
